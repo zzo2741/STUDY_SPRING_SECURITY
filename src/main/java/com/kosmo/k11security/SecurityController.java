@@ -69,6 +69,7 @@ public class SecurityController
 			e.printStackTrace();
 		}
 		model.addAttribute("user_id", user_id);
+		System.out.println("로그인함");
 
 		return "09Security/Step2/login";
 	}

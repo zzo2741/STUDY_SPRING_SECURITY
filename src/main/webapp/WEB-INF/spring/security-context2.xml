@@ -15,6 +15,7 @@
 			- login-page : 커스텀 로그인 페이지의 요청명을 가짐 
 			- default-target-url : 로그인 후 기본으로 보여질 페이지 지정
 			- authentication-failure-url : 로그인에 실패했을 때 보여질 페이지 지정 
+			- login-processing-url : action은 /login이 default이고 만약 변경하고 싶다면 해당 속성을 통해 변경할 수 있다.
 			- username-parameter : 로그인 시 사용할 아이디의 name속성
 			- password-parameter : 로그인 시 사용할 패스워드의 name속성
 		logout 
@@ -40,7 +41,8 @@
 		<security:form-login 
 			login-page="/security2/login.do" 
 			default-target-url="/security2/index.do" 
-			authentication-failure-url="/security2/login.do?error" 
+			authentication-failure-url="/security2/login.do?error"
+			login-processing-url="/loginAction"
 			username-parameter="id"
 			password-parameter="pass" />
 		<security:logout 

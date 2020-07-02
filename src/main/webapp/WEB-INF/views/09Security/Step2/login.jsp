@@ -30,7 +30,7 @@
 				</form:form>
 			</c:when>
 			<c:otherwise>
-				<c:url value="/login" var="loginUrl"></c:url>
+				<c:url value="/loginAction" var="loginUrl"></c:url>
 				<form:form name="loginFrm" action="${loginUrl }" method="post">
 					<c:if test="${param.error != null }">
 						<p>아이디와 패스워드가 잘못되었습니다.</p>
